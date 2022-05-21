@@ -4,9 +4,8 @@ import styled from "styled-components";
 import Box from "../Components/Box";
 const MainBox = styled.main`
   display: flex;
-
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
   align-items: center;
 `;
 const SubBox = styled.div`
@@ -23,12 +22,15 @@ const Search = styled.input`
   margin-top: 4vh;
   margin-bottom: 1vh;
   width: 50%;
+  height:4vh;
   padding: 5px 6px;
   border: transparent;
   transition: 1s;
   ::placeholder {
     color: #333333;
     opacity: 0.8;
+    text-align:center;
+    font-size:1.5rem;
   }
   &:hover {
     background-color: #e0ffff;
@@ -37,10 +39,21 @@ const Search = styled.input`
 const Poster = styled.img`
   width: 200px;
   height: 250px;
+  &:hover{
+    cursor:pointer;
+    transform: scale(80%)
+  }
 `;
 
 const Card = styled.section`
   margin-top: 8vh;
+  display:flex;
+  flex-flow: wrap;
+  align-items:center;
+  justify-content:space-evenly;
+  width:40%;
+  height:70vh;
+  overflow:hidden;
 `;
 
 const SubTitle = styled.h2`

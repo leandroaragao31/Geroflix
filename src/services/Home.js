@@ -74,7 +74,7 @@ export default class Home extends React.Component {
         <Card>
           <a href="https://9q5br.csb.app/movies" alt="site movies">
             <Photo
-              src="https://m.gifmania.pt/Gifs-Animados-Filmes/Imagens-Animadas-Elementos-De-Cinema/Gif-Animados-Movie-Theaters/Movie-Theaters-82068.gif"
+              src="https://logos.flamingtext.com/Name-Logos/Flix-design-stripes-name.gif"
               alt="movies"
             />
           </a>

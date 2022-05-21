@@ -10,8 +10,9 @@ const SeriesApi = axios.create({
 
 const MainBox = styled.main`
   display: flex;
-  flex-direction: column;
+  flex-wrap:wrap;
   align-items: center;
+  justify-content:space-evenly;
 `;
 
 const SubBox = styled.div`
@@ -25,10 +26,20 @@ const SubBox = styled.div`
 const Poster = styled.img`
   width: 200px;
   height: 250px;
+  &:hover{
+    cursor:pointer;
+    transform: scale(80%)
+  }
 `;
 
 const Card = styled.section`
   margin-top: 8vh;
+  display:flex;
+  flex-flow: wrap;
+  align-items:center;
+  justify-content:space-evenly;
+  width:40%;
+  height:70vh;
 `;
 
 const Search = styled.input`
@@ -37,12 +48,15 @@ const Search = styled.input`
   margin-top: 4vh;
   margin-bottom: 1vh;
   width: 50%;
+  height:4vh;
   padding: 5px 6px;
   border: transparent;
   transition: 1s;
   ::placeholder {
     color: #333333;
     opacity: 0.8;
+    text-align:center;
+    font-size:1.5rem; 
   }
   &:hover {
     background-color: #e0ffff;
@@ -103,8 +117,9 @@ export default class Series extends React.Component {
             arial-label="pesquise aqui"
           />
         </SubBox>
-        <Card>
-          {this.state.series.map((item, index) => (
+
+        {this.state.series.map((item, index) => (
+          <Card>
             <Box key={index}>
               <h2>{item.name}</h2>
               <Poster src={item.poster_path} alt="imagem" />
@@ -112,8 +127,9 @@ export default class Series extends React.Component {
               <h3>Sinopse</h3>
               <Sinopse>{item.overview}</Sinopse>
             </Box>
-          ))}
-        </Card>
+          </Card>
+        ))}
+
       </MainBox>
     );
   }

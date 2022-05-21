@@ -2,15 +2,14 @@ import styled from "styled-components";
 
 const Box = styled.div`
   display: flex;
-  width: 80vw;
-
-  flex-direction: column;
+  width: 80%;
+  height:60vh;
+  flex-flow:column wrap;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-bottom: 2px solid;
+  justify-content: space-evenly;
+  border: 1.9px dashed;
   cursor: pointer;
-  transition: 1s;
+  transition: 1s ease-in;
   &:hover {
     background-color: #eedd82;
   }
